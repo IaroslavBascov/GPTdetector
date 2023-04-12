@@ -148,7 +148,9 @@
 </style>
 </head>
 <body style="margin: 0px;padding: 0px;">
- <div class="home">
+<div data-text="Введите текст..." class="text" id="input" contenteditable></div>
+<input value="Проверить текст" id="button" class="but" type="button">
+<div class="home">
     <div class="elem">
         <div class="name elem"><span>CatchGPT</span></div>
         <div class="elem"><span id="tst">Проверяет, написан ли текст в ChatGPT</span></div>
@@ -170,8 +172,6 @@
         </select>
     </div>
 </div>
-<div data-text="Введите текст..." class="text" id="input" contenteditable></div>
-<input value="Проверить текст" id="button" class="but" type="button">
 <script src="code.js"></script>
 </body>
 </html>
