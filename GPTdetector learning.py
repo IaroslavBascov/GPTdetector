@@ -3,13 +3,17 @@ import os
 import math
 def word_count(str):
     counts = dict()
-    words = str.split()
-
-    for word in words:
-        if word in counts:
-            counts[word] += 1/len(words)
-        else:
-            counts[word] = 1/len(words)
+    for i in range(1,4):
+        words = str.split()
+        for j in range(len(words)-i-1):
+            word=""
+            for u in range(0,i):
+                word+=words[u+j]
+            if word in counts:
+                counts[word] += 1/len(words)
+            else:
+                counts[word] = 1/len(words)
+    
 
     return counts
 sys.stdin.reconfigure(encoding="utf-8")
@@ -53,21 +57,26 @@ for key in hum2:
     realHum[key]=(hum1[key]+hum2[key])/2
 prt="Слово:         GPT:    Ошиб:   Чел:    Ошиб:   Разн:"
 print(prt)
-
+fo=0
 for key in realGPT.keys():
     force[key]=abs(realGPT[key]-realHum[key])-(abs(gpt1[key]-gpt2[key])+abs(hum1[key]-hum2[key]))/2
 force=dict(sorted(force.items(), key=lambda item: item[1]))
 force=dict(reversed(force.items()))
 i=0
-for key in force.keys():
+kkkkkk=[]
+kkkkkk=list(force.keys())
+for key in kkkkkk:
     i+=1
-    if i>30:
-        realGPT.pop(key)
+    if i>100:
+        force.pop(key)
         realHum.pop(key)
+        realGPT.pop(key)
+    else:
+        fo+=force[key]
 for key in realGPT:
     prt="".join([
         str(key),
-        " "*(15-len(key)),
+        " "*(30-len(key)),
         str(math.ceil(realGPT[key]*1000)/10),
         "%    ",
         str(abs(math.ceil(500*(gpt1[key]-gpt2[key]))/10)),
@@ -81,11 +90,15 @@ for key in realGPT:
         str(force[key])
     ])
     print(prt)
+print(str(fo))
 f= open('dataGPT.txt','w')
 f.write(str(realGPT))
 f.close()
 f= open('dataHum.txt','w')
 f.write(str(realHum))
+f.close()
+f= open('force.txt','w')
+f.write(str(force))
 f.close()
 while True:
     pass
