@@ -90,7 +90,7 @@
         resize: none;
         height: 40px;
         left: 210px;
-        top:calc(100% - 50px);
+        bottom:10px;
         width: calc(100% - 220px);
         cursor: pointer;
     }
@@ -119,17 +119,19 @@
     .not{
         color: #555 !important;
     }
-    @media only screen and (max-width: 1000px) {
+    @media only screen and (max-width: 800px) and (hover: none) {
         .text{
-            min-height: calc(100% - 200px);
+            min-height: calc(100% - 260px);
+            padding-bottom: 80px;
             width:calc(100% - 40px);
             left: 0px;
+            font-size: 20px;
         }
         .home .elem{
             display: inline-table;
             vertical-align: middle;
-            font-size: 15px;
-            height: 60px !important;
+            font-size: 20px;
+            height: 100px !important;
             border-bottom: 0px solid rgb(91, 91, 91);
             border-right: 1px solid rgb(91, 91, 91);
             max-width: 180px;
@@ -142,22 +144,24 @@
         .elem .elem{
             border:0px;
             display: table;
-            font-size: 15px;
-            min-height: 30px;
-            height: 30px !important;
+            font-size: 17px;
+            max-height: 50px;
+            height: 50px !important;
             width: 100%;
         }
         .elem .name{
-            font-size: 20px !important;
+            font-size: 25px !important;
         }
         .but{
+            font-size: 20px;
+            height: 60px;
             width:calc(100% - 20px);
             left: 10px;
         }
         .home{
             position:sticky;
             width: calc(100% - 20px);
-            height: 60px;
+            height: 100px;
         }
     }
 </style>
