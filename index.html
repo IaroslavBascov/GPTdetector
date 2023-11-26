@@ -29,17 +29,17 @@
         border: 0px;
         outline: none;
         height: 100%;
-        width: 180px;
+        width: 5cm;
         left: 0px;
         top:0px;
-        padding-top:10px;
-        padding-left:10px;
-        padding-right:10px;
-        padding-bottom:10px;
+        padding-top:0.25cm;
+        padding-left:0.25cm;
+        padding-right:0.25cm;
+        padding-bottom:0.25cm;
     }
     .name{
         color: white !important;
-        font-size: 20px !important;
+        font-size: 0.5cm !important;
     }
     .elem{
         font-family: Calibri;
@@ -47,11 +47,11 @@
         text-align: center;
         padding: 0;
         color: rgb(200, 200, 200);
-        font-size: 15px;
+        font-size: 0.375cm;
         background-color:rgb(32,33,35);
         border-bottom: 1px solid rgb(91, 91, 91);
         outline: none;
-        min-height: 40px;
+        min-height: 1cm;
         width: 100%;
     }
     .text *{
@@ -61,7 +61,7 @@
         color:black !important;
         background-color: white !important;
         display: contents !important;
-        font-size: 15px !important;
+        font-size: 0.375cm !important;
         line-height: normal!important;
     }
     .text{
@@ -69,29 +69,29 @@
         right:0px;
         outline: none;
         border:0px #555 solid;
-        min-height: calc(100% - 80px);
-        padding-bottom: 60px;
-        padding-top:20px;
-        padding-left:20px;
-        padding-right:20px;
-        width: calc(100% - 240px);
+        min-height: calc(100% - 2cm);
+        padding-bottom: 1.5cm;
+        padding-top:0.5cm;
+        padding-left:0.5cm;
+        padding-right:0.5cm;
+        width: calc(100% - 6.5cm);
     }
     .elem:last-child.elem{
         border:0px #555 solid;
     }
     .but{
-        font-size: 15px;
+        font-size: 0.375cm;
         background-color: white;
-        border-radius: 10px;
+        border-radius: 0.25cm;
         position:fixed;
         border: 0px solid grey;
-        box-shadow: 0 0 5px 0 grey;
+        box-shadow: 0 0 0.125cm 0 rgb(138, 108, 108);
         outline: none;
         resize: none;
-        height: 40px;
-        left: 210px;
-        bottom:10px;
-        width: calc(100% - 220px);
+        height: 1cm;
+        right: 0.5cm;
+        bottom:0.25cm;
+        width: calc(100% - 6.5cm);
         cursor: pointer;
     }
     span {
@@ -104,7 +104,7 @@
     }
     .down{
         position:absolute;
-        bottom:30px;
+        bottom:0.75cm;
         left:0px;
     }
     .down *{
@@ -121,46 +121,46 @@
     }
     @media (hover: none) {
         .text{
-            min-height: calc(100% - 260px);
-            padding-bottom: 80px;
-            width:calc(100% - 40px);
+            min-height: calc(100% - 6.5cm);
+            padding-bottom: 2cm;
+            width:calc(100% - 1cm);
             left: 0px;
-            font-size: 20px;
+            font-size: 0.5cm;
         }
         .home .elem{
             display: inline-table;
             vertical-align: middle;
-            font-size: 20px;
-            height: 100px !important;
+            font-size: 0.5cm;
+            height: 2.5cm !important;
             border-bottom: 0px solid rgb(91, 91, 91);
             border-right: 1px solid rgb(91, 91, 91);
-            max-width: 180px;
+            max-width: 4.5cm;
             width:30%;
         }
         .down{
             position: static;
-            padding-left:calc(100% - 590px);
+            padding-left:calc(100% - 14.75cm);
         }
         .elem .elem{
             border:0px;
             display: table;
-            font-size: 17px;
-            max-height: 50px;
-            height: 50px !important;
+            font-size: 0.5cm;
+            max-height: 1.25cm;
+            height: 1.25cm !important;
             width: 100%;
         }
         .elem .name{
-            font-size: 25px !important;
+            font-size: 1.25cm !important;
         }
         .but{
-            font-size: 20px;
-            height: 60px;
-            width:calc(100% - 20px);
-            left: 10px;
+            font-size: 0.5cm;
+            height: 1cm;
+            width:calc(100% - 0.5cm);
+            left: 0.25cm;
         }
         .home{
             position:sticky;
-            width: calc(100% - 20px);
+            width: calc(100% - 0.5cm);
             height: 100px;
         }
     }
