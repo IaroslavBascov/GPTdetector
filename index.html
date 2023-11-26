@@ -4,6 +4,13 @@
 <meta name="author" content="Sprattus">
 <meta charset="UTF-8">
 <title>SpratGPT</title>
+<!-- Android Viewport height fix-->
+<script type="text/javascript">
+    var isAndroid = navigator.userAgent.toLowerCase().indexOf("android") > -1; //&& ua.indexOf("mobile");
+    if(isAndroid) {
+        document.write('<meta name="viewport" content="width=device-width,height='+window.innerHeight+', initial-scale=1.0">');
+    }
+    </script> 
 <style>
     body{
         font-family: Calibri !important;
@@ -54,7 +61,7 @@
         min-height: 5vw;
         width: 100%;
     }
-    .text .text *{
+    .text.text *{
         font-style:normal !important;
         font-weight: normal !important;
         font-family: Calibri !important;
@@ -75,6 +82,12 @@
         padding-left:1vw;
         padding-right:1vw;
         width: calc(100% - 20vw);
+        font-style:normal !important;
+        font-weight: normal !important;
+        font-family: Calibri !important;
+        color:black !important;
+        font-size: 1.5vw !important;
+        line-height: normal!important;
     }
     .elem:last-child.elem{
         border:0px #555 solid;
@@ -121,20 +134,25 @@
     }
     @media (hover: none) {
         .text{
-            min-height: calc(100% - 45vw);
+            min-height: calc(100% - 54.5vw);
             padding-bottom: 15vw;
             width:97vw;
             left: 0px;
-            font-size: 3vw !important;
+            font-style:normal !important;
+            font-weight: normal !important;
+            font-family: Calibri !important;
+            color:black !important;
+            font-size: 4.5vw !important;
+            line-height: normal!important;
         }
-        .text *{
+        .text.text *{
         font-style:normal !important;
         font-weight: normal !important;
         font-family: Calibri !important;
         color:black !important;
         background-color: white !important;
         display: contents !important;
-        font-size: 3vw !important;
+        font-size: 4.5vw !important;
         line-height: normal!important;
     }
         .home .elem{
@@ -142,8 +160,8 @@
             padding-left: 2.5vw;
             display: inline-table;
             vertical-align: middle;
-            font-size: 3vw;
-            height: 25vw !important;
+            font-size: 4.2vw;
+            height: 35vw !important;
             border-bottom: 0px solid rgb(91, 91, 91);
             border-right: 1px solid rgb(91, 91, 91);
             width: 26vw;
@@ -156,26 +174,27 @@
             padding-left: 0vw;
             border:0px;
             display: table;
-            font-size: 3vw;
+            font-size: 4.2vw;
             max-height: 15vw;
-            height: 12.5vw !important;
+            height: 17.5vw !important;
             width: 100%;
         }
         .elem .name{
-            font-size: 5vw !important;
+            font-size: 7vw !important;
         }
         .but{
             position:fixed;
-            font-size: 3vw;
+            font-size: 4.5vw;
             height: 10vw;
             width:95vw;
             left: 2.5vw;
             bottom: 2.5vw;
         }
         .home{
+            padding-bottom: 2vw;
             position:sticky;
             width: 96vw;
-            height: 25vw;
+            height: 35vw;
         }
     }
 </style>
