@@ -73,7 +73,9 @@ for key in kkkkkk:
         realGPT.pop(key)
     else:
         fo+=force[key]
-for key in realGPT:
+for key in force.keys():
+        force[key]/=fo
+for key in force:
     prt="".join([
         str(key),
         " "*(30-len(key)),
