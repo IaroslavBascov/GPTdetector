@@ -28,18 +28,18 @@
         right:0px;
         border: 0px;
         outline: none;
-        height: 100%;
-        width: 5cm;
+        height: calc( 100% - 3vw );
+        width: 15vw;
         left: 0px;
         top:0px;
-        padding-top:0.25cm;
-        padding-left:0.25cm;
-        padding-right:0.25cm;
-        padding-bottom:0.25cm;
+        padding-top:1.5vw;
+        padding-left:1.5vw;
+        padding-right:1.5vw;
+        padding-bottom:1.5vw;
     }
     .name{
         color: white !important;
-        font-size: 0.5cm !important;
+        font-size: 2vw !important;
     }
     .elem{
         font-family: Calibri;
@@ -47,21 +47,21 @@
         text-align: center;
         padding: 0;
         color: rgb(200, 200, 200);
-        font-size: 0.375cm;
+        font-size: 1.5vw;
         background-color:rgb(32,33,35);
         border-bottom: 1px solid rgb(91, 91, 91);
         outline: none;
-        min-height: 1cm;
+        min-height: 5vw;
         width: 100%;
     }
-    .text *{
+    .text .text *{
         font-style:normal !important;
         font-weight: normal !important;
         font-family: Calibri !important;
         color:black !important;
         background-color: white !important;
         display: contents !important;
-        font-size: 0.375cm !important;
+        font-size: 1.5vw !important;
         line-height: normal!important;
     }
     .text{
@@ -69,29 +69,29 @@
         right:0px;
         outline: none;
         border:0px #555 solid;
-        min-height: calc(100% - 2cm);
-        padding-bottom: 1.5cm;
-        padding-top:0.5cm;
-        padding-left:0.5cm;
-        padding-right:0.5cm;
-        width: calc(100% - 6.5cm);
+        min-height: calc(100% - 8vw);
+        padding-bottom: 7vw;
+        padding-top:1vw;
+        padding-left:1vw;
+        padding-right:1vw;
+        width: calc(100% - 20vw);
     }
     .elem:last-child.elem{
         border:0px #555 solid;
     }
     .but{
-        font-size: 0.375cm;
+        font-size: 1.5vw;
         background-color: white;
-        border-radius: 0.25cm;
+        border-radius: 1vw;
         position:fixed;
         border: 0px solid grey;
-        box-shadow: 0 0 0.125cm 0 rgb(138, 108, 108);
+        box-shadow: 0 0 1vw 0 rgb(138, 108, 108);
         outline: none;
         resize: none;
-        height: 1cm;
-        right: 0.5cm;
-        bottom:0.25cm;
-        width: calc(100% - 6.5cm);
+        height: 4vw;
+        right: 2vw;
+        bottom:2vw;
+        width: 78vw;
         cursor: pointer;
     }
     span {
@@ -104,7 +104,7 @@
     }
     .down{
         position:absolute;
-        bottom:0.75cm;
+        bottom:0;
         left:0px;
     }
     .down *{
@@ -121,63 +121,74 @@
     }
     @media (hover: none) {
         .text{
-            min-height: calc(100% - 6.5cm);
-            padding-bottom: 2cm;
-            width:calc(100% - 1cm);
+            min-height: calc(100% - 45vw);
+            padding-bottom: 15vw;
+            width:97vw;
             left: 0px;
-            font-size: 0.5cm;
+            font-size: 3vw !important;
         }
+        .text *{
+        font-style:normal !important;
+        font-weight: normal !important;
+        font-family: Calibri !important;
+        color:black !important;
+        background-color: white !important;
+        display: contents !important;
+        font-size: 3vw !important;
+        line-height: normal!important;
+    }
         .home .elem{
+            padding-right: 2.5vw;
+            padding-left: 2.5vw;
             display: inline-table;
             vertical-align: middle;
-            font-size: 0.5cm;
-            height: 2.5cm !important;
+            font-size: 3vw;
+            height: 25vw !important;
             border-bottom: 0px solid rgb(91, 91, 91);
             border-right: 1px solid rgb(91, 91, 91);
-            max-width: 3cm;
-            width:30%;
+            width: 26vw;
         }
         .down{
             position: static;
-            padding-left:calc(100% - 14.75cm);
         }
         .elem .elem{
+            padding-right: 0vw;
+            padding-left: 0vw;
             border:0px;
             display: table;
-            font-size: 0.5cm;
-            max-height: 1.25cm;
-            height: 1.25cm !important;
+            font-size: 3vw;
+            max-height: 15vw;
+            height: 12.5vw !important;
             width: 100%;
         }
         .elem .name{
-            font-size: 1.25cm !important;
+            font-size: 5vw !important;
         }
         .but{
-            font-size: 0.5cm;
-            height: 1cm;
-            width:calc(100% - 0.5cm);
-            left: 0.25cm;
+            position:fixed;
+            font-size: 3vw;
+            height: 10vw;
+            width:95vw;
+            left: 2.5vw;
+            bottom: 2.5vw;
         }
         .home{
             position:sticky;
-            width: calc(100% - 0.5cm);
-            height: 2.5cm;
+            width: 96vw;
+            height: 25vw;
         }
     }
 </style>
 </head>
 <body style="margin: 0px;padding: 0px;">
-<div class="home">
-    <div class="elem">
+<div class="home"><div class="elem">
         <div class="name elem"><span>SpratGPT</span></div>
         <div class="elem"><span id="tst"></span></div>
-    </div>
-    <div class="elem not">
+    </div><div class="elem not">
         <span id="output">
             
         </span>
-    </div>
-    <div class="elem down">
+    </div><div class="elem down">
         <div class="elem">
             <span id="outlen">
                 
@@ -188,8 +199,7 @@
                 <option value="eng"  class="elem">English</option>
                 <option value="rus"  class="elem">Русский</option>
         </select>
-    </div>
-</div>
+    </div></div>
 <div data-text="" class="text" id="input" contenteditable></div>
 <input value="" id="button" class="but" type="button">
 <script src="code.js"></script>
